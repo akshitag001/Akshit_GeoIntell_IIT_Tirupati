@@ -173,3 +173,34 @@ flowchart TD
         C --> D[Geo Q/A Bot]
         D --> E[End-to-End Geo Intelligence Platform]
 ```
+
+---
+
+## About me
+
+Hi, I am **Akshit Agarwal**.
+
+Kaggle profile:
+
+- https://www.kaggle.com/akshitagarwal01
+
+### My story behind this project
+
+This project was a personal turning point for me.
+
+When I started, GIS was completely new to me. I had never worked with this type of geospatial data before. While building this pipeline, I learned how to read and process large orthomosaic TIFF files, how to convert model predictions into GIS-ready shapefiles, and how important memory-safe tiled processing is for real-world data.
+
+I also learned that practical GeoAI is not only about training a model. It is about end-to-end reliability: clean preprocessing, stable inference, usable outputs, and simple workflows that others can run without friction.
+
+This work gave me both technical confidence and a deeper appreciation for how AI can support planning and public-impact geospatial applications.
+
+### Thank you note
+
+I sincerely thank:
+
+- **IIT Tirupati**
+- **Ministry of Panchayati Raj**
+- **NIC Geospatial Division**
+- **Geo-Intel Lab, IITTNiF**
+
+for the guidance, ecosystem, and motivation that made this learning journey and project possible.

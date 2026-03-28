@@ -106,24 +106,18 @@ This project taught me that real-world GeoAI is not just model accuracy:
 
 ---
 
-## Model files note
+## Model files
 
-Current model checkpoints are larger than GitHub’s 100 MB single-file limit:
+Model checkpoints are shared through Google Drive (both .pth files):
 
-- `unet_best_v4.pth` (~280 MB)
-- `deeplab_best_v4.pth` (~102 MB)
+- https://drive.google.com/drive/folders/1VQmLG7FAc4ikkmuw1RXm7u2Kxh5EmFms?usp=drive_link
 
-So they may need either:
+Download the models and place them in the project root folder:
 
-1. **Git LFS**, or
-2. Hosting on Drive/HuggingFace/Release assets and updating download links.
+- unet_best_v4.pth
+- deeplab_best_v4.pth
 
-If Git LFS is available:
-
-```bash
-git lfs install
-git lfs track "*.pth"
-```
+Reason: these files are larger than GitHub’s 100 MB single-file limit.
 
 ---
 
@@ -144,3 +138,38 @@ Optional:
 ## End goal
 
 Make geospatial extraction practical: **drop TIFF → run pipeline → get SHP ready for GIS tools**.
+
+---
+
+## Work in progress
+
+The next phase of this project is focused on expanding capability and making the system production-friendly.
+
+### 1) New classes to detect
+
+- Railway lines
+- Bridges
+- House roofs
+
+### 2) Stronger unified pipeline
+
+- Better multi-class training setup for additional categories
+- Improved post-processing for cleaner and more connected polygons
+- More robust handling for large TIFF scenes and varied image quality
+- Better configuration support so users can select model/class profiles easily
+
+### 3) Geo Q/A assistant (ongoing)
+
+- A question-answering bot for geospatial outputs and project usage help
+- Planned support for questions like:
+    - Which classes were detected in this area?
+    - How to run the pipeline for a new district?
+    - Which model should I use for my use case?
+
+```mermaid
+flowchart TD
+        A[Current: TIFF to SHP] --> B[Add More Classes]
+        B --> C[Improve Multi-Class Pipeline]
+        C --> D[Geo Q/A Bot]
+        D --> E[End-to-End Geo Intelligence Platform]
+```
